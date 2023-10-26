@@ -6,6 +6,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
+
 const produtos = [
   {id: 1, nome:"", preco:"", descricao:"", imagem:""},
   {id: 2, nome:"", preco:"", descricao:"", imagem:""},
@@ -17,11 +18,14 @@ const produtos = [
   {id: 8, nome:"", preco:"", descricao:"", imagem:""},
   {id: 9, nome:"", preco:"", descricao:"", imagem:""},
   {id: 10, nome:"", preco:"", descricao:"", imagem:""},
+
 ]
 
 app.get('/', (req, res) => {
   res.render('index', { message: 'Olá, Mundo!' });
 });
+
+
 
 app.get('/produto', (req, res) => {
   res.render('produto', { message: 'Olá, Mundo!' });
