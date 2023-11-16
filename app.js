@@ -21,6 +21,11 @@ const produtos = [
 
 ]
 
+function buscarProdutosPorID(){
+  const produto = produto = produto.find(produto => produto.id == 2);
+  return produto || null
+}
+
 app.get('/', (req, res) => {
   res.render('index', { message: 'Olá, Mundo!' });
 });
@@ -35,3 +40,4 @@ app.get('/produto', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
